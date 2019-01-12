@@ -1,19 +1,25 @@
 import React ,{Component } from  'react'
 import {Container, Content,Text, Button}  from 'native-base'
-import FooterApps from './Komponen/FooterApps'
-import HeaderApps from  './Komponen/HeaderApps'
+
+
 
 export default class  Profile extends React.Component{
     render(){
       
         return(
-            <Container>
-                <HeaderApps judul={"Profile"}  />
-                <Content>
+            <Container style={{flex:1}}>
+            
+                <Content style={{flex:1}}>
                     <Text>
-                        Profile
+                    Sekarang di Profile
                     </Text>
-                    
+                    <Button
+                    onPress={()=>this.props.navigation.navigate('HomeScreen')}
+                    >
+                        <Text>
+                            Pindah Ke Home
+                        </Text>
+                    </Button>
                 </Content>
                
             </Container>
